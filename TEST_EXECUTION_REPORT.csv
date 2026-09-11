@@ -1,0 +1,11 @@
+Test ID,Description,Status (Pass/Fail),Notes/Bugs found,Screenshot reference
+AUTH-001,Login with valid credentials,Fail,"Dashboard login API request timed out: POST https://dev.api.agnoshealth.com/api/ai_dashboard/login; dashboard did not load","test-results/auth-Authentication-AUTH-0-ff5d1-s-in-with-valid-credentials-chromium/test-failed-1.png"
+AUTH-002,Reject invalid credentials,Fail,"Login page did not return a visible invalid-credentials message; dev API was unavailable","test-results/auth-Authentication-AUTH-002---rejects-invalid-credentials-chromium/test-failed-1.png"
+AUTH-003,Logout,Fail,"Could not reach authenticated dashboard because login API timed out","test-results/auth-Authentication-AUTH-003---logs-out-successfully-chromium/test-failed-1.png"
+DASH-001,Navigate dashboard tabs,Fail,"Could not reach dashboard after login; dev API timeout prevented authenticated navigation","test-results/dashboard-Dashboard-naviga-5749f-ates-through-dashboard-tabs-chromium/test-failed-1.png"
+PAT-001,Search for a patient record,Fail,"Could not open patient list because login API timed out","test-results/patient-list-Patient-recor-70b7b-arches-for-a-patient-record-chromium/test-failed-1.png"
+PAT-002,Filter records by triage level,Fail,"Could not open patient list because login API timed out","test-results/patient-list-Patient-recor-aed07-ers-records-by-triage-level-chromium/test-failed-1.png"
+PAT-003,Filter records by date range,Fail,"Could not open patient list because login API timed out","test-results/patient-list-Patient-recor-a7691-lters-records-by-date-range-chromium/test-failed-1.png"
+PAT-004,Filter records by channel,Fail,"Could not open patient list because login API timed out","test-results/patient-list-Patient-recor-9d661--filters-records-by-channel-chromium/test-failed-1.png"
+PAT-005,Download patient records,Fail,"Could not open patient list because login API timed out","test-results/patient-list-Patient-recor-3c6d0---downloads-patient-records-chromium/test-failed-1.png"
+SIGNUP-001,Display required registration fields and disabled submit state,Pass,"Signup page loaded and required fields plus disabled Confirm button were visible",""

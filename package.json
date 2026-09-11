@@ -1,0 +1,19 @@
+{
+  "name": "agnos-ai-dashboard-playwright",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Playwright and TypeScript QA automation for the Agnos AI Dashboard.",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^22.10.0",
+    "dotenv": "^16.4.7",
+    "typescript": "^5.7.2"
+  }
+}
