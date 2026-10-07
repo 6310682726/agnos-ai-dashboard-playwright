@@ -11,7 +11,7 @@ test.describe('Authentication', () => {
     await loginPage.expectLoginError();
   });
 
-  test('AUTH-003 - logs out successfully', async ({ loginPage, dashboardPage }) => {
+  test('AUTH-003 - logs out and returns to the login form', async ({ loginPage, dashboardPage }) => {
     await loginAsTestUser(loginPage, dashboardPage);
     await loginPage.logout();
     await loginPage.expectLoggedOut();

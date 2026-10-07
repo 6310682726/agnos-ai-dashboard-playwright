@@ -1,15 +1,17 @@
-# Test execution report
+# Agnos AI Dashboard test report
 
-| Test ID | Description | Status (Pass/Fail) | Notes/Bugs found | Screenshot reference |
-|---|---|---|---|---|
-| AUTH-001 | Register a new dashboard user | Not Run |  |  |
-| AUTH-002 | Reject invalid registration data | Not Run |  |  |
-| AUTH-003 | Login with valid credentials | Not Run |  |  |
-| AUTH-004 | Reject invalid credentials | Not Run |  |  |
-| AUTH-005 | Logout | Not Run |  |  |
-| DASH-001 | Navigate dashboard tabs | Not Run |  |  |
-| PAT-001 | Search for a patient record | Not Run |  |  |
-| PAT-002 | Filter records by triage level | Not Run |  |  |
-| PAT-003 | Filter records by date range | Not Run |  |  |
-| PAT-004 | Filter records by channel | Not Run |  |  |
-| PAT-005 | Download patient records | Not Run |  |  |
+Use `TEST_EXECUTION_REPORT.csv` as the execution log and import it into Google Sheets when preparing the assignment's spreadsheet deliverable.
+For manual execution steps and screenshot evidence, see [`MANUAL_TEST_REPORT.md`](./MANUAL_TEST_REPORT.md).
+
+| Test ID | Type | Description | Automation status | Manual status | Notes / defects | Screenshot or trace |
+|---|---|---|---|---|---|---|
+| AUTH-001 | Automated / Manual | Valid login | Not Run | Not Run |  |  |
+
+## Summary
+
+- Automated tests: 0 passed, 0 failed, 0 skipped
+- Manual tests: 0 passed, 0 failed, 0 not run
+- Data/environment blockers:
+- Defects:
+
+Do not mark an automated run as manual execution. Record `Blocked` when a precondition such as synthetic test data is missing, and include the exact reason. Do not include credentials or real patient information in this report or attached evidence.

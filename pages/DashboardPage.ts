@@ -5,24 +5,23 @@ export class DashboardPage {
 
   async expectLoaded(): Promise<void> {
     await expect(this.page).toHaveURL(/ai_dashboard/);
-    await expect(
-      this.page.getByRole('heading', { name: /dashboard|overview|patient/i }).first()
-    ).toBeVisible();
+    await expect(this.page.getByText('Diagnosis List', { exact: true }).first()).toBeVisible();
+    await expect(this.page.getByRole('button', { name: /log out/i })).toBeVisible();
   }
 
   async openPatientList(): Promise<void> {
-    await this.page.getByRole('link', { name: /patient|record|case/i }).first().click();
+    await this.page.getByRole('link', { name: /Diagnosis List/i }).click();
   }
 
-  async openTab(name: string | RegExp): Promise<void> {
-    await this.page.getByRole('link', { name }).or(
-      this.page.getByRole('tab', { name })
-    ).first().click();
+  async selectCaseStatus(status: string): Promise<void> {
+    await this.page.getByText(status, { exact: true }).first().click();
   }
 
-  async expectNavigationTabVisible(name: string | RegExp): Promise<void> {
-    await expect(this.page.getByRole('link', { name }).or(
-      this.page.getByRole('tab', { name })
-    ).first()).toBeVisible();
+  async expectCaseStatusSelected(status: string): Promise<void> {
+    const statusLabel = this.page.getByText(status, { exact: true }).first();
+    await expect(statusLabel).toBeVisible();
+    await expect.poll(() =>
+      statusLabel.evaluate((element) => window.getComputedStyle(element).fontWeight)
+    ).toBe('700');
   }
 }
