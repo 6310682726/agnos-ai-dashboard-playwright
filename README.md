@@ -51,9 +51,7 @@ tests/                 Playwright test specifications and fixtures
 playwright.config.ts   Browser, URL, timeout, and artifact configuration
 TEST_PLAN.md           Manual and automation test-case matrix
 TEST_CASES.tsv         Detailed spreadsheet-ready test cases (tab-separated)
-TEST_REPORT_TEMPLATE.md Execution-report template
 TEST_EXECUTION_REPORT.csv Latest automated and manual execution results
-TEST_EXECUTION_SUMMARY.md Latest run summary, defect, and blocked coverage
 MANUAL_TEST_REPORT.md   Manual test steps, results, and screenshot evidence
 manual-evidence/        Screenshots captured for manual test findings
 ```
@@ -64,4 +62,4 @@ Selectors intentionally prefer accessible labels, roles, and text. If the deploy
 
 The development UI may change labels or route names. The page objects use accessible roles and visible text where available; some dashboard filters currently expose no semantic checkbox/tab roles, so their selected state is checked through the visible UI.
 
-The CSV report is the source of truth in this repository and can be imported into Google Sheets (`Blank spreadsheet` → `File` → `Import` → `Upload`). The latest run summary is in `TEST_EXECUTION_SUMMARY.md`. Creating a hosted Google Sheet requires an authenticated Google account; no Google Sheet is created by the test suite. Manual results must be recorded separately from automated results.
+The CSV report is the source of truth for execution results and can be imported into Google Sheets (`File` → `Import` → `Upload`). Manual steps and screenshot evidence are in `MANUAL_TEST_REPORT.md`; keep manual results separate from automated results.

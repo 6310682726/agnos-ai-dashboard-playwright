@@ -39,4 +39,4 @@ Triage correctness must be compared with the source record and an approved clini
 - The latest automated run showed zero diagnosis cases. Until a synthetic record is created, PAT-001 and PAT-005 are skipped, and PAT-002 through PAT-004 only verify filter-control interaction—not that record filtering returns correct rows.
 - SIGNUP-002 currently fails: the Confirm button becomes enabled for a malformed email. The test does not submit the form.
 - Successful registration and diagnosis creation are not run automatically because they create persistent records in the development environment.
-- An explicitly approved synthetic guest diagnosis attempt reached the AI results page but emitted HTTP 500; the staff dashboard continued to show zero cases. See `TEST_EXECUTION_REPORT.csv` and `TEST_EXECUTION_SUMMARY.md`.
+- An explicitly approved synthetic guest diagnosis attempt reached the AI results page but emitted HTTP 500; the staff dashboard continued to show zero cases. See `TEST_EXECUTION_REPORT.csv` and `MANUAL_TEST_REPORT.md`.
