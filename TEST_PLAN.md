@@ -6,6 +6,12 @@ The target is the staff-facing AI dashboard at `AGNOS_DASHBOARD_URL`. The dashbo
 
 Use only synthetic test data. Create a test diagnosis through `AGNOS_PATIENT_URL` before running cases that need a matching record or exported rows. Store its non-identifying record ID in `TEST_PATIENT_SEARCH`; do not put real patient information in test data, screenshots, traces, or reports.
 
+## Detailed test case design
+
+`TEST_CASES.tsv` is the full test-case matrix for Registration/Login/Logout, Navigation, Search, Triage, Date, Channel, combined filters, and Download. It uses the requested spreadsheet columns and is tab-separated for direct paste or import into Google Sheets. The matrix includes positive, negative, and boundary/security cases. These are designed cases, not execution results.
+
+Triage correctness must be compared with the source record and an approved clinical severity mapping; this plan does not define or infer clinical criteria. Use synthetic records only. Do not run account-creation or export cases against real patient data.
+
 ## Test cases
 
 | Test ID | Scenario | Preconditions | Steps | Expected result | Automation coverage | Manual status |

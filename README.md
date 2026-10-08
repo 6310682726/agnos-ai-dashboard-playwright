@@ -50,6 +50,7 @@ pages/                 Page Object Model classes
 tests/                 Playwright test specifications and fixtures
 playwright.config.ts   Browser, URL, timeout, and artifact configuration
 TEST_PLAN.md           Manual and automation test-case matrix
+TEST_CASES.tsv         Detailed spreadsheet-ready test cases (tab-separated)
 TEST_REPORT_TEMPLATE.md Execution-report template
 TEST_EXECUTION_REPORT.csv Latest automated and manual execution results
 TEST_EXECUTION_SUMMARY.md Latest run summary, defect, and blocked coverage
